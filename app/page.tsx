@@ -1,4 +1,5 @@
 "use client";
+"use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -81,7 +82,7 @@ const Hero = () => {
           style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', letterSpacing: '0.18em', color: DIM }}
         >
           <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: VIOLET, display: 'inline-block' }} />
-          Available · Riyadh · 2026
+           Riyadh · 2026
         </motion.div>
 
         <h1
@@ -132,7 +133,7 @@ const Hero = () => {
           className="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-5xl"
         >
           <div className="md:col-span-7" style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 400, fontSize: '17px', lineHeight: 1.65, color: INK }}>
-            Strategy consulting trained at PwC. Design-trained at Imperial College London. Working at the intersection where Saudi Arabia's transformation strategy meets its citizen experience.
+          Shaping work that turns progress into tangible impact for people and communities.
           </div>
           <div className="uppercase md:col-span-4 md:col-start-9" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', letterSpacing: '0.18em', color: DIM }}>
             <div className="mb-2" style={{ color: DIM }}>CURRENTLY</div>
