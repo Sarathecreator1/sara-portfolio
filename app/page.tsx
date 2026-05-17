@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -24,7 +23,7 @@ const SectionLabel = ({ num, label }) => (
 );
 
 const Hero = () => {
-  const roles = ['strategist.', 'designer.', 'translator.', 'builder.'];
+  const roles = ['strategist.', 'problem-solver.', 'transformer.', 'builder.'];
   const [roleIdx, setRoleIdx] = useState(0);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [dotPos, setDotPos] = useState({ x: -100, y: -100 });
@@ -50,7 +49,7 @@ const Hero = () => {
     return () => cancelAnimationFrame(id);
   }, [cursorPos, dotPos]);
 
-  const headline = 'Strategy at the edge of design.';
+  const headline = 'Thought. Built.';
   const words = headline.split(' ');
 
   return (
@@ -133,7 +132,7 @@ const Hero = () => {
           className="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-5xl"
         >
           <div className="md:col-span-7" style={{ fontFamily: 'Inter Tight, sans-serif', fontWeight: 400, fontSize: '17px', lineHeight: 1.65, color: INK }}>
-          Shaping work that turns progress into tangible impact for people and communities.
+            Early career consultant transforming complex problems into clear, actionable solutions at the intersection of strategy, technology, and impact.
           </div>
           <div className="uppercase md:col-span-4 md:col-start-9" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', letterSpacing: '0.18em', color: DIM }}>
             <div className="mb-2" style={{ color: DIM }}>CURRENTLY</div>
@@ -172,24 +171,21 @@ const OperatingPremise = () => (
       </div>
       <div className="md:col-span-8 md:col-start-5">
         <p className="mb-8" style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: 'clamp(22px, 2.4vw, 32px)', lineHeight: 1.4, letterSpacing: '-0.01em', color: INK }}>
-          I work where the Gulf's ambition meets its execution gap.
+          I work where the region's ambition meets its execution expectations.
         </p>
         <p className="mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: '19px', lineHeight: 1.7, color: INK }}>
-          Transformation programs fail less often from lack of strategy than from the distance between a strategy deck and a citizen's tuesday morning. I'm trained on both sides of that distance strategy frameworks from a year inside PwC's public sector practice and, I'm interested in what closes the gap.
+          Transformation programs fail less often from lack of strategy than from the distance between a strategy deck and the lived experience. I'm trained on both sides of that distance strategy frameworks from a year inside PwC's public and private sector practice, I'm interested in what creates the biggest impact.
         </p>
         <p className="mb-6" style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: '19px', lineHeight: 1.7, color: INK }}>
-          My background is in information systems and cybersecurity, which means I read systems before I read people. That turns out to matter. Most "human-centered" work fails to take seriously the institutional machinery the human is actually navigating. I try to take both seriously.
-        </p>
-        <p className="mb-12" style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: '19px', lineHeight: 1.7, color: INK }}>
-          I am early in my career. I am not early in my thinking.
+          My academic background is in information systems and cybersecurity. That foundation gives me a structural lens on transformation work, an ability to see how organizations actually function before recommending how they should change. I find the technical, operational, and human dimensions of a problem are rarely separable, and the strongest work treats them together.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8" style={{ borderTop: `1px solid ${RULE}` }}>
           {[
             { k: 'BASE', v: 'Riyadh, KSA' },
             { k: 'LANGUAGE', v: 'Arabic · English' },
-            { k: 'TRAINING', v: 'PwC · Imperial' },
-            { k: 'INTEREST', v: 'Public-sector reinvention' },
+            { k: 'TRAINING', v: 'PwC · Imperial · Saudi Energy' },
+            { k: 'INTEREST', v: 'Consulting' },
           ].map((m) => (
             <div key={m.k}>
               <div className="uppercase mb-2" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', letterSpacing: '0.18em', color: DIM }}>
@@ -209,9 +205,9 @@ const OperatingPremise = () => (
 const HowIThink = () => {
   const beats = [
     { n: '01', verb: 'Provoke', desc: 'I start with the question the brief is avoiding. Most engagements arrive with a stated problem and a different real one. Naming the real one is the first deliverable.' },
-    { n: '02', verb: 'Reframe', desc: 'I rewrite the problem in language a citizen would use. If a Deputy Minister and a citizen describe the same problem differently, the second description is the one I work from.' },
+    { n: '02', verb: 'Reframe', desc: 'I rewrite the problem in the language of the people it ultimately affects. Stated problems and lived problems are rarely identical, and the gap between them is usually where the real work is.' },
     { n: '03', verb: 'Field', desc: 'I go look. Research is not a phase, it is a posture. Even when I cannot interview, I read complaints, transcripts, and policy filings as primary data.' },
-    { n: '04', verb: 'System', desc: 'I map. Not because diagrams are pretty but because they expose where the slack lives in a system — the joints where intervention is cheapest and impact is largest.' },
+    { n: '04', verb: 'System', desc: 'I map. Visualizing how the parts of a problem connect surfaces the points where small interventions create the largest effect, the kind of leverage thats hard to spot in narrative form.' },
     { n: '05', verb: 'Move', desc: 'I prototype the smallest version of the change that still tells the truth. A working sketch beats a polished idea; a tested wrong answer beats an untested right one.' },
     { n: '06', verb: 'Horizon', desc: 'I close every engagement with a future-state that is one degree more ambitious than the brief asked for. That is the part of the work that travels.' },
   ];
@@ -221,7 +217,7 @@ const HowIThink = () => {
       <SectionLabel num="02" label="How I Think" />
       <div className="max-w-6xl">
         <h2 className="mb-16 max-w-4xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: INK }}>
-          A method, not a vocabulary. <span style={{ color: DIM, fontStyle: 'italic' }}>Six moves I make on every problem.</span>
+          A method, not a vocabulary. <span style={{ color: DIM, fontStyle: 'italic' }}>Six aspects I consider on every problem.</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: RULE }}>
@@ -319,7 +315,7 @@ const CaseStudy = ({ num, eyebrow, title, lede, theme, provoke, reframe, field, 
             </div>
           ))}
           <div className="col-span-2 md:col-span-4 pt-4" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '9px', letterSpacing: '0.18em', color: DIM }}>
-            * STRATEGIC EXPLORATION — INDICATIVE OUTCOMES, NOT CLIENT-REPORTED FIGURES.
+            * STRATEGIC EXPLORATION — INDICATIVE OUTCOMES, NOT CLIENT-REPORTED FIGURES. ILLUSTRATIVE; NOT TIED TO ANY SPECIFIC COUNTRY OR CLIENT.
           </div>
         </div>
       )}
@@ -327,31 +323,35 @@ const CaseStudy = ({ num, eyebrow, title, lede, theme, provoke, reframe, field, 
   </article>
 );
 
-const PermitJourneyDiagram = () => (
-  <svg viewBox="0 0 800 240" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto' }}>
-    <text x="0" y="20" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9" letterSpacing="2">CURRENT-STATE PERMIT JOURNEY · 17 TOUCHPOINTS · 3 AGENCIES</text>
+const InnovationGatesDiagram = () => (
+  <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto' }}>
+    <text x="0" y="20" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9" letterSpacing="2">INNOVATION PORTFOLIO · FOUR-GATE OPERATING MODEL</text>
     {[
-      { x: 60, label: 'Discover', friction: 2 }, { x: 140, label: 'Register', friction: 4 },
-      { x: 220, label: 'Submit', friction: 5 }, { x: 300, label: 'Wait', friction: 8 },
-      { x: 380, label: 'Resubmit', friction: 7 }, { x: 460, label: 'Wait', friction: 8 },
-      { x: 540, label: 'Visit', friction: 6 }, { x: 620, label: 'Pay', friction: 3 },
-      { x: 700, label: 'Receive', friction: 2 },
-    ].map((step, i, arr) => {
-      const y = 140 - step.friction * 8;
+      { x: 100, label: 'FRAME', sub: 'hypothesis', survive: '100%' },
+      { x: 280, label: 'VALIDATE', sub: 'falsifiable test', survive: '~30%' },
+      { x: 460, label: 'BUILD', sub: 'real prototype', survive: '~10%' },
+      { x: 640, label: 'SCALE', sub: 'production', survive: '~3%' },
+    ].map((g, i, arr) => {
       const next = arr[i + 1];
       return (
-        <g key={i}>
-          {next && <line x1={step.x} y1={y} x2={next.x} y2={140 - next.friction * 8} stroke={RULE} strokeWidth="1" />}
-          <circle cx={step.x} cy={y} r="4" fill={step.friction >= 7 ? VIOLET : INK} />
-          <text x={step.x} y={y - 14} fill={INK} fontFamily="JetBrains Mono, monospace" fontSize="9" textAnchor="middle">{step.label}</text>
-          <text x={step.x} y={210} fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="8" textAnchor="middle">D+{i*4}</text>
+        <g key={g.label}>
+          <rect x={g.x - 50} y={80} width="100" height="60" fill="none" stroke={i === 0 ? INK : VIOLET} />
+          <text x={g.x} y={105} fill={INK} fontFamily="JetBrains Mono, monospace" fontSize="11" textAnchor="middle">{g.label}</text>
+          <text x={g.x} y={125} fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9" textAnchor="middle" fontStyle="italic">{g.sub}</text>
+          <text x={g.x} y={175} fill={VIOLET} fontFamily="Fraunces, serif" fontSize="22" textAnchor="middle" fontStyle="italic">{g.survive}</text>
+          <text x={g.x} y={195} fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="8" textAnchor="middle">SURVIVING</text>
+          {next && (
+            <>
+              <line x1={g.x + 50} y1={110} x2={next.x - 50} y2={110} stroke={DIM} strokeWidth="1" />
+              <text x={(g.x + next.x) / 2} y={70} fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="8" textAnchor="middle">KILL CRITERIA</text>
+            </>
+          )}
         </g>
       );
     })}
-    <line x1="40" y1="220" x2="760" y2="220" stroke={RULE} />
-    <text x="40" y="235" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="8">DAY 0</text>
-    <text x="720" y="235" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="8">DAY 32</text>
-    <text x="380" y="60" fill={VIOLET} fontFamily="JetBrains Mono, monospace" fontSize="9" textAnchor="middle">FRICTION PEAK · DECISION LATENCY</text>
+    <line x1="40" y1="230" x2="760" y2="230" stroke={RULE} />
+    <text x="40" y="250" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="8">IDEAS IN</text>
+    <text x="720" y="250" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="8">IDEAS SHIPPED</text>
   </svg>
 );
 
@@ -388,28 +388,32 @@ const AIDecisionDiagram = () => (
   </svg>
 );
 
-const WorkforceSystemDiagram = () => (
-  <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto' }}>
-    <text x="0" y="20" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9" letterSpacing="2">SAUDIZATION RECAST · FROM QUOTA TO CAPABILITY SYSTEM</text>
-    <circle cx="400" cy="170" r="60" fill="none" stroke={VIOLET} />
-    <text x="400" y="166" fill={INK} fontFamily="Fraunces, serif" fontSize="13" textAnchor="middle" fontStyle="italic">Capability</text>
-    <text x="400" y="184" fill={INK} fontFamily="Fraunces, serif" fontSize="13" textAnchor="middle" fontStyle="italic">System</text>
+const HiddenCapacityDiagram = () => (
+  <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto' }}>
+    <text x="0" y="20" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9" letterSpacing="2">KNOWLEDGE WORKER TIME ALLOCATION · CURRENT VS RECOVERABLE</text>
+    <text x="0" y="70" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9">CURRENT</text>
+    <rect x={100} y={55} width="240" height="28" fill="none" stroke={INK} />
+    <text x={220} y={73} fill={INK} fontFamily="JetBrains Mono, monospace" fontSize="9" textAnchor="middle">VALUE WORK · 35%</text>
+    <rect x={340} y={55} width="260" height="28" fill="none" stroke={VIOLET} strokeDasharray="3,3" />
+    <text x={470} y={73} fill={VIOLET} fontFamily="JetBrains Mono, monospace" fontSize="9" textAnchor="middle">COORDINATION · 38%</text>
+    <rect x={600} y={55} width="180" height="28" fill="none" stroke={DIM} />
+    <text x={690} y={73} fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9" textAnchor="middle">THEATRE · 27%</text>
+    <text x="0" y="135" fill={VIOLET} fontFamily="JetBrains Mono, monospace" fontSize="9">RECOVERABLE</text>
     {[
-      { x: 180, y: 80, l: 'EDUCATION', s: 'upstream signal' },
-      { x: 620, y: 80, l: 'EMPLOYER', s: 'demand model' },
-      { x: 100, y: 220, l: 'CITIZEN', s: 'trajectory' },
-      { x: 700, y: 220, l: 'POLICY', s: 'incentive shape' },
-      { x: 400, y: 290, l: 'LABOUR MARKET', s: 'feedback loop' },
-    ].map((n) => (
-      <g key={n.l}>
-        <line x1={n.x} y1={n.y} x2="400" y2="170" stroke={RULE} />
-        <circle cx={n.x} cy={n.y} r="6" fill={INK} />
-        <text x={n.x} y={n.y - 14} fill={INK} fontFamily="JetBrains Mono, monospace" fontSize="9" textAnchor="middle">{n.l}</text>
-        <text x={n.x} y={n.y + 20} fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="8" textAnchor="middle" fontStyle="italic">{n.s}</text>
+      { x: 100, label: 'MEETINGS', sub: 'by inertia', value: '~8%' },
+      { x: 340, label: 'APPROVALS', sub: 'no decision variance', value: '~9%' },
+      { x: 580, label: 'ROLE DRIFT', sub: 'scope vs design', value: '~5%' },
+    ].map((src) => (
+      <g key={src.label}>
+        <rect x={src.x} y={120} width="160" height="80" fill="none" stroke={VIOLET} />
+        <text x={src.x + 80} y={145} fill={INK} fontFamily="JetBrains Mono, monospace" fontSize="10" textAnchor="middle">{src.label}</text>
+        <text x={src.x + 80} y={163} fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9" textAnchor="middle" fontStyle="italic">{src.sub}</text>
+        <text x={src.x + 80} y={188} fill={VIOLET} fontFamily="Fraunces, serif" fontSize="20" textAnchor="middle" fontStyle="italic">{src.value}</text>
       </g>
     ))}
-    <text x="60" y="60" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9">OLD MODEL: QUOTA</text>
-    <line x1="55" y1="64" x2="180" y2="64" stroke={DIM} />
+    <line x1="0" y1="230" x2="800" y2="230" stroke={RULE} />
+    <text x="0" y="252" fill={DIM} fontFamily="JetBrains Mono, monospace" fontSize="9">TOTAL CAPACITY HIDDEN IN THE SYSTEM</text>
+    <text x="780" y="252" fill={VIOLET} fontFamily="Fraunces, serif" fontSize="22" textAnchor="end" fontStyle="italic">~22%</text>
   </svg>
 );
 
@@ -439,10 +443,10 @@ const GigaProjectBlueprint = () => (
 
 const FieldNotes = () => {
   const notes = [
-    { n: '01', title: "On the difference between a strategy and a story.", body: 'A strategy that cannot be told as a story will not survive the first reorg. The work is to make the strategy and the story the same artifact — not to make a deck and then a narrative.' },
-    { n: '02', title: 'AI is a research partner, not a research shortcut.', body: 'I use Claude the way I would use a sharp colleague at 11pm — to argue with my own framing, to surface counter-evidence, to draft the first version of something I will then carve away from. It accelerates the part of thinking that should not be the bottleneck.' },
-    { n: '03', title: 'The most under-designed surface in government is the rejection letter.', body: 'A rejection is the place a citizen is most likely to lose faith in an institution. Most rejections are written by people who have never read one. Designing better rejections may be the highest-leverage public-service intervention available.' },
-    { n: '04', title: 'Vision 2030 is not a deadline. It is a coordinate system.', body: 'The error is to read 2030 as a date by which things must be done. It is a way of organizing what things matter and what things do not. The portfolio of work that survives is the portfolio that takes the coordinate system seriously.' },
+    { n: '01', title: "On the difference between a strategy and a story.", body: 'A strategy that cannot be told as a story will not survive the first reorg. The work is to make the strategy and the story the same artifact not to make a deck and then a narrative.' },
+    { n: '02', title: 'AI is a research partner, not a research shortcut.', body: 'I use Artificial Intelligence the way I would use a sharp colleague at 11pm to argue with my own framing, to surface counter-evidence, to draft the first version of something I will then carve away from. It accelerates the part of thinking that should not be the bottleneck.' },
+    { n: '03', title: 'Every era has its "quantum moment" a technology that is simultaneously over-hyped and under-prepared for.', body: 'Cloud was one. Mobile was one. Generative AI is one. Quantum will be one. The pattern repeats: most organizations either dismiss it too long or react to it too early. The discipline is in pacing knowing which signals to act on and which to wait out.' },
+    { n: '04', title: 'The stock market is a voting machine in the short term and a weighing machine in the long term', body: 'That gap is where most strategic mistakes get made. Companies optimize for the voting machine because the signal is louder, then discover too late that the weighing machine was the only one that mattered. The discipline is to make decisions for the weighing machine while still surviving the voting machine.' },
   ];
 
   return (
@@ -452,7 +456,7 @@ const FieldNotes = () => {
         Things I'm thinking about <span style={{ color: DIM, fontStyle: 'italic' }}>this quarter.</span>
       </h2>
       <p className="mb-16 max-w-2xl" style={{ fontFamily: 'Inter Tight, sans-serif', fontSize: '15px', color: DIM, lineHeight: 1.6 }}>
-        Not finished essays. Not LinkedIn posts. Working notes — the kind you would write in a Moleskine at the back of a meeting.
+      Working notes on the questions I keep returning to. Not polished essays, just things I think are worth thinking about more carefully.
       </p>
       <div className="max-w-5xl">
         {notes.map((note, i) => (
@@ -539,7 +543,7 @@ const Trajectory = () => {
 const Instruments = () => {
   const groups = [
     { title: 'For thinking', desc: 'Methods I reach for first when the brief is ambiguous.', items: ['Problem framing', 'Journey mapping', 'Service blueprinting', 'Stakeholder mapping', 'Systems mapping', 'Design research'] },
-    { title: 'For making things tangible', desc: 'Tools for moving from a concept to a thing a senior client can react to.', items: ['Figma', 'Miro', 'Visio', 'Claude (build & explore)', 'ChatGPT', 'Wireframes & flows'] },
+    { title: 'For making things tangible', desc: 'Tools for translating concepts into artifacts clients can engage with directly.', items: ['Figma', 'Visio', 'Claude (build & explore)', 'ChatGPT', 'Wireframes & flows'] },
     { title: 'For the boardroom', desc: 'Where the work gets argued. The deliverables clients actually open on a Tuesday morning.', items: ['Executive storytelling', 'PowerPoint', 'Benchmarking synthesis', 'Maturity models', 'Governance frameworks', 'MS Project · Excel'] },
   ];
 
@@ -615,10 +619,10 @@ const Closing = () => (
     <SectionLabel num="10" label="In Closing" />
     <div className="max-w-6xl">
       <h2 className="mb-8 max-w-5xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: 'clamp(40px, 7vw, 96px)', lineHeight: 1, letterSpacing: '-0.04em', color: INK }}>
-        I'm looking for the room where transformation gets <span style={{ fontStyle: 'italic', color: VIOLET }}>decided</span> — and then <span style={{ fontStyle: 'italic', color: VIOLET }}>designed.</span>
+        I'm looking for the room where transformation gets <span style={{ fontStyle: 'italic', color: VIOLET }}>decided</span> — and then <span style={{ fontStyle: 'italic', color: VIOLET }}>delivered.</span>
       </h2>
       <p className="mb-16 max-w-3xl" style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: '22px', lineHeight: 1.6, color: DIM }}>
-        Not a soloist. Not a generalist. A translator between the strategy floor and the experience floor — looking for a team that needs both, working on problems that matter at the scale of a country.
+      Early in my career. Clear on the direction.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pt-12" style={{ borderTop: `1px solid ${RULE}` }}>
@@ -639,13 +643,13 @@ const Closing = () => (
           <div className="uppercase mb-4" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', letterSpacing: '0.18em', color: DIM }}>
             Take with you
           </div>
-          <a href="#" className="inline-block group" style={{ borderBottom: `1px solid ${VIOLET}` }}>
+          <a href="/resume.pdf" className="inline-block group" style={{ borderBottom: `1px solid ${VIOLET}` }}>
             <span className="group-hover:opacity-70 transition-opacity" style={{ fontFamily: 'Fraunces, serif', fontSize: '24px', fontWeight: 300, fontStyle: 'italic', color: INK }}>
               Resume · PDF
             </span>
           </a>
           <div className="mt-4" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', color: DIM, letterSpacing: '0.12em' }}>
-            One page. Read it on the elevator.
+           
           </div>
         </div>
       </div>
@@ -661,6 +665,69 @@ const Closing = () => (
     </div>
   </section>
 );
+const MobileBottomNav = () => {
+  const [activeSection, setActiveSection] = useState('thinking');
+
+  useEffect(() => {
+    const sections = ['thinking', 'work', 'notes', 'contact'];
+    const handler = () => {
+      // Find which section is currently most in view
+      let current = 'thinking';
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2) current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener('scroll', handler);
+    handler();
+    return () => window.removeEventListener('scroll', handler);
+  }, []);
+
+  const items = [
+    { href: '#thinking', label: 'Method', id: 'thinking' },
+    { href: '#work', label: 'Work', id: 'work' },
+    { href: '#notes', label: 'Notes', id: 'notes' },
+    { href: '#contact', label: 'Contact', id: 'contact' },
+  ];
+
+  return (
+    <nav
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40"
+      style={{
+        background: 'rgba(10, 10, 11, 0.92)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderTop: `1px solid ${RULE}`,
+      }}
+    >
+      <div className="flex justify-around items-center py-3 px-4">
+        {items.map((item) => {
+          const isActive = activeSection === item.id;
+          return (
+            <a
+              key={item.href}
+              href={item.href}
+              className="uppercase transition-colors"
+              style={{
+                fontFamily: 'JetBrains Mono, monospace',
+                fontSize: '10px',
+                letterSpacing: '0.18em',
+                color: isActive ? VIOLET : DIM,
+                padding: '6px 4px',
+              }}
+            >
+              {item.label}
+            </a>
+          );
+        })}
+      </div>
+    </nav>
+  );
+};
 
 export default function Portfolio() {
   return (
@@ -679,31 +746,31 @@ export default function Portfolio() {
       <div id="work">
         <CaseStudy
           num="01 / 04"
-          eyebrow="Citizen Experience · Public Sector"
-          theme="Vision 2030 · Quality of Life"
-          title="The Invisible Citizen."
+          eyebrow="Innovation Strategy · Corporate"
+          theme="Operating Model · Portfolio Design"
+          title="The Innovation Backlog."
           lede={
             <>
-              <p style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: '24px', lineHeight: 1.5, color: INK, fontStyle: 'italic' }}>
-                "I gave up halfway. I figured someone else would tell me when to come back."
+              <p style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: '26px', lineHeight: 1.4, color: INK, fontStyle: 'italic' }}>
+                Most large organizations have hundreds of innovation ideas in flight at any given time. They ship almost none of them.
               </p>
               <p className="uppercase" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', letterSpacing: '0.18em', color: DIM, marginTop: '12px' }}>
-                — citizen, age 34, on a permit renewal that took 32 days
+                — the central problem of corporate innovation
               </p>
             </>
           }
-          provoke="The brief asked how to reduce permit-processing time. The real question is why citizens stop expecting the state to come back to them. Speed is a symptom. Faith is the underlying variable."
-          reframe="A permit is not an administrative output. It is a small contract of trust between a citizen and the institution. Each silent week is a withdrawal from that account. The redesign target is not throughput. It is restoring the felt presence of an active counterparty on the other side of the application."
-          field="Read 240 publicly available service complaints. Mapped the language citizens used. Three quarters of negative descriptions did not mention duration — they mentioned silence. Citizens did not say 'this was slow'; they said 'I didn't know if anyone was looking.' That is a different problem."
-          system="Mapped the journey as 17 touchpoints across 3 agencies. Friction concentrates at the two waiting intervals — D+8 and D+16 — where the citizen has no signal at all. These are the cheap intervention points. The institution is already doing work there; it is just not visible."
-          move="Prototyped three small interventions: (1) a status that updates daily even when nothing has happened, with the institution naming what it is currently doing; (2) a single named caseworker visible to the citizen; (3) a rejection format that always includes a path forward. Tested with 12 citizens. All three were rated more impactful than 'making it faster.'"
-          horizon="The horizon is not 'a faster permit.' It is a redefinition of what a public service is — from a transaction to a continuous conversation. That reframing is portable to every citizen-facing service the state runs."
-          diagram={<PermitJourneyDiagram />}
+          provoke="The brief asked how to generate more ideas. That is rarely the real problem. Most organizations have more ideas than they can execute; what they lack is the operating system that decides which ideas move, which die fast, and which get protected long enough to mature. The bottleneck is not creativity, it is the decision architecture around creativity."
+          reframe="Reframe innovation as a portfolio problem, not a creativity problem. Treat ideas like investments: some get seed funding, most get killed early, a small number get protected runway, and a smaller number still get scaled. The discipline is not in having ideas. It is in deciding."
+          field="Reviewed how leading firms structure their innovation pipelines corporate venture units, internal incubators, growth offices. The pattern that distinguishes the effective ones is rarely the quality of their ideas. It is the speed and clarity with which they decide which ideas to stop working on."
+          system="Mapped the typical innovation lifecycle as four gates: Frame, Validate, Build, Scale with explicit kill criteria at each gate. Most organizations have the first and last gates; almost none have rigorous middle gates. The result: ideas drift through the middle of the pipeline, consuming attention without ever being formally validated or formally killed."
+          move="Drafted a one-page operating model: each idea enters with a hypothesis, a falsifiable test, and a budget of time and money. At each gate, the idea either earns the next tranche or stops. No idea is allowed to live in the pipeline without an active sponsor and an active test. The artifact is not a process diagram. It is a permission structure."
+          horizon="The portable insight: organizations that out-innovate their peers are not the ones with better ideas. They are the ones with a faster, more honest decision rhythm. The most valuable thing an innovation function can build is its own discipline for stopping work."
+          diagram={<InnovationGatesDiagram />}
           metrics={[
-            { value: '32→9d', label: 'TARGET CYCLE' },
-            { value: '17→9', label: 'TOUCHPOINTS' },
-            { value: '+58%', label: 'TRUST INDEX*' },
-            { value: '3', label: 'AGENCIES' },
+            { value: '4', label: 'PORTFOLIO GATES' },
+            { value: '~70%', label: 'IDEAS STOPPED EARLY*' },
+            { value: '3×', label: 'CYCLE COMPRESSION*' },
+            { value: '1pg', label: 'OPERATING MODEL' },
           ]}
         />
 
@@ -722,7 +789,7 @@ export default function Portfolio() {
               </p>
             </>
           }
-          provoke="The brief was 'use AI to automate approvals.' That brief misunderstands the problem. The bottleneck is not approval — it is triage. Senior reviewers are not the constraint; senior attention is."
+          provoke="The brief was 'use AI to automate approvals.' That brief misunderstands the problem. The bottleneck is not approval it is triage. Senior reviewers are not the constraint; senior attention is."
           reframe="Reframe the AI's job: not as a decider but as a sorter. The AI's role is to identify which cases are genuinely novel and route those to humans; route the structurally repeating cases to a lighter path. The AI never approves; it allocates human attention. That is a categorically safer scope for AI in public sector."
           field="Reviewed 90 anonymized case summaries from comparable jurisdictions. Clustered them by structural features. Identified five recurring case archetypes accounting for the bulk of senior reviewer time. None of the five required the kind of judgment senior reviewers were hired for."
           system="Designed a two-track decision flow. Track A: AI-triaged repeating cases routed to a junior reviewer with a templated rationale. Track B: structurally novel cases routed to senior reviewer with the AI surfacing relevant precedent. The AI does not decide. It compresses latency."
@@ -739,28 +806,31 @@ export default function Portfolio() {
 
         <CaseStudy
           num="03 / 04"
-          eyebrow="Workforce Transformation · Policy Design"
-          theme="Vision 2030 · Human Capability"
-          title="Saudization as a Capability System."
+          eyebrow="Operational Transformation · Corporate"
+          theme="Productivity · Organizational Design"
+          title="The Hidden Capacity."
           lede={
             <>
-              <p style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: '26px', lineHeight: 1.4, color: INK, fontStyle: 'italic' }}>
-                What if Saudization were not a quota at all — but the visible surface of an underlying capability system the country was building on purpose?
+              <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '14px', letterSpacing: '0.06em', color: VIOLET }}>
+                WORKING HYPOTHESIS
+              </p>
+              <p style={{ fontFamily: 'Fraunces, serif', fontWeight: 300, fontSize: '28px', lineHeight: 1.4, color: INK, marginTop: '12px' }}>
+                Large organizations already have the capacity they need. They cannot see it because it is hidden inside meetings that don't matter, approvals that compound delay, and talent already in the building but never deployed.
               </p>
             </>
           }
-          provoke="A quota is a measurement of an outcome. A capability is a precondition for the outcome to occur naturally. Saudi employers and Saudi citizens both currently optimize for the quota. Neither is optimizing for the capability the quota is meant to proxy."
-          reframe="Recast the entire program: from 'how many Saudis are in this firm' to 'what is the trajectory of the capabilities available to this firm in the Saudi labour market.' The KPI moves from a headcount snapshot to a capability flow."
-          field="Read 30+ peer-reviewed papers and policy reviews on workforce nationalization programs across the Gulf and Asia. The successful programs share one feature: they made the employer a co-architect of the upstream capability pipeline, not just a downstream consumer of it."
-          system="Mapped five nodes — Education, Employer, Citizen, Policy, Labour Market — and the feedback loops between them. The current system is unidirectional (policy → employer → citizen). The redesigned system is circular, with the employer feeding capability demand signals back into the education system in something close to real time."
-          move="Drafted a one-page intervention brief: a 'capability demand exchange' run as a thin public layer between large employers and university programs. Not a database. A conversation infrastructure. The point is not the technology — the point is to change who is in the room."
-          horizon="The harder argument the brief makes: workforce nationalization, properly framed, is not a labour policy. It is an industrial policy. Treating it that way is what makes the 2030 horizon plausible."
-          diagram={<WorkforceSystemDiagram />}
+          provoke="The brief is usually framed as a cost problem: 'we need to do more with less.' That framing produces cost-cutting, which is rarely the right answer. The better frame is a visibility problem: the organization is already paying for capacity it is not using. The work is to find it."
+          reframe="Recast the engagement: not a cost-reduction exercise, but a capacity audit. The goal is to identify the work the organization is doing that does not need to be done, and the people in the organization who could be doing more important work if freed from the work that does not matter."
+          field="Reviewed how comparable firms allocate time across three categories: value-creating work, coordination work, and theatre work. The pattern is consistent knowledge workers spend a disproportionate share of their time in coordination and theatre, not because they choose to, but because the operating model rewards it."
+          system="Built a simple framework mapping the three categories against the organization's actual time data. Identified three structural sources of hidden capacity: meetings that exist by inertia, approval chains with no decision rights variance, and roles whose scope has drifted from their original purpose. Each is fixable. None is fixable in isolation."
+          move="Drafted a three-move intervention: (1) a meeting audit with explicit termination criteria; (2) a decision-rights map showing which approvals could be delegated downward without quality loss; (3) a role-scope review identifying where actual work has diverged from job design. The output is not a transformation programme. It is a set of small structural changes that compound."
+          horizon="The strategic claim: organizations rarely need to be made bigger. They need to be made visible to themselves. The first job of any serious transformation is to find the capacity already there before commissioning the capacity that isn't."
+          diagram={<HiddenCapacityDiagram />}
           metrics={[
-            { value: '5', label: 'SYSTEM NODES' },
-            { value: '1→5', label: 'FEEDBACK LOOPS' },
-            { value: 'thin', label: 'PUBLIC LAYER' },
-            { value: '∞', label: 'TIME HORIZON' },
+            { value: '3', label: 'INTERVENTION MOVES' },
+            { value: '~22%', label: 'TIME RECOVERED*' },
+            { value: '0', label: 'HEADCOUNT CHANGE' },
+            { value: '1', label: 'OPERATING MODEL SHIFT' },
           ]}
         />
 
@@ -781,10 +851,10 @@ export default function Portfolio() {
           }
           provoke="If 30,000 people are building a new city, and the experience of working on the project is itself friction-heavy, the project will lose the talent it spent years recruiting. The internal employee experience is not an HR concern. It is a delivery risk."
           reframe="Treat the internal employee experience as a product. Apply the same service design rigor giga-projects already apply to their external citizen experience. The employee is the first citizen of the project."
-          field="Reviewed publicly available employee reviews of three named regional giga-projects. The pattern is consistent: pride in the mission, frustration with the day. The frustration is not strategic — it is operational. Onboarding, tool access, decision rights, manager visibility."
-          system="Built a service blueprint across the first 90 days of the employee experience. Five lanes — Evidence, Employee, Frontstage, Backstage, Systems — across five phases — Pre-board, Day 1, Week 1, Month 1, Quarter 1. The Backstage and Systems lanes were where the most fixable friction lived."
+          field="Reviewed publicly available employee reviews of three named regional giga-projects. The pattern is consistent: pride in the mission, frustration with the day. The frustration is not strategic it is operational. Onboarding, tool access, decision rights, manager visibility."
+          system="Built a service blueprint across the first 90 days of the employee experience. Five lanes: Evidence, Employee, Frontstage, Backstage, Systems across five phases, Pre-board, Day 1, Week 1, Month 1, Quarter 1. The Backstage and Systems lanes were where the most fixable friction lived."
           move="Identified three Day-1 interventions a project could ship in under a quarter: (1) a single named human owner for each new hire's first 30 days; (2) an integrated tool-access bundle issued pre-arrival, not post-arrival; (3) a 30-day reflection touchpoint that feeds back into the blueprint itself. Each is cheap. Each compounds."
-          horizon="The strategic claim: a giga-project's ability to deliver its 2030 vision is bounded by its ability to retain the people delivering it. Service design applied internally is not an HR perk — it is a delivery capability."
+          horizon="The strategic claim: a giga-project's ability to deliver its 2030 vision is bounded by its ability to retain the people delivering it. Service design applied internally is not an HR perk it is a delivery capability."
           diagram={<GigaProjectBlueprint />}
           metrics={[
             { value: '5×5', label: 'BLUEPRINT GRID' },
@@ -799,6 +869,7 @@ export default function Portfolio() {
       <Trajectory />
       <Instruments />
       <Closing />
+      <MobileBottomNav /> 
     </div>
   );
 }
